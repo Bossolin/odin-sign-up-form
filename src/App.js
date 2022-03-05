@@ -1,6 +1,5 @@
 import logo from "./img/odin-lined.png";
 import background from "./img/aurora.JPG";
-import "./fonts/Norse-Bold.otf";
 
 function App() {
   return (
@@ -8,7 +7,7 @@ function App() {
       <div style={{ backgroundImage: `url(${background})` }}>
         <div>
           <img src={logo} alt="Odin logo" />
-          <span>ODIN</span>
+          <span className="font-odin">ODIN</span>
         </div>
         <p>Photo by Mattis Knudsen</p>
       </div>
