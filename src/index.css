@@ -9,11 +9,11 @@
 
 @layer components {
   .input {
-    @apply shadow-sm border-slate-200 rounded border-2 mb-6;
+    @apply shadow-sm border-slate-200 rounded border-2 mb-6 h-8 focus:shadow-lg;
   }
 
   .label {
-    @apply text-sm;
+    @apply text-xs font-bold tracking-wider;
   }
 
   .container {

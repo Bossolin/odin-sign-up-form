@@ -31,7 +31,7 @@ function App() {
           <h1 className="py-4 bg-white px-8 sm:pl-12 border-t border-slate-500 border-opacity-10 text-2xl font-bold">
             Let's do this!
           </h1>
-          <fieldset className="bg-white shadow-lg px-8 sm:pl-12 flex flex-wrap">
+          <fieldset className="bg-white shadow-lg px-12 sm:pr-20 sm:px-12 sm:grid sm:grid-cols-2 gap-x-12 lg:pr-64 pb-4">
             <div className="container">
               <label htmlFor="firstName" className="label">
                 FIRST NAME
