@@ -2,6 +2,10 @@ import logo from "./img/odin-lined.png";
 import background from "./img/aurora.JPG";
 
 function App() {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
+
   return (
     <div className="sm:flex">
       <div
@@ -27,20 +31,22 @@ function App() {
         <p className="text-2xl font-semibold px-8 sm:pl-12 mb-14">
           You <i>know</i> you want to.
         </p>
+        <h1 className="py-4 bg-white px-8 sm:pl-12 border-t border-slate-500 border-opacity-10 text-2xl font-bold">
+          Let's do this!
+        </h1>
         <form action="">
-          <h1 className="py-4 bg-white px-8 sm:pl-12 border-t border-slate-500 border-opacity-10 text-2xl font-bold">
-            Let's do this!
-          </h1>
-          <fieldset className="bg-white shadow-lg px-12 sm:pr-20 sm:px-12 sm:grid sm:grid-cols-2 gap-x-12 lg:pr-64 pb-4">
+          <fieldset className="bg-white shadow-lg px-12 sm:pr-20 sm:px-12 sm:grid sm:grid-cols-2 gap-x-12 lg:pr-64 pb-5">
             <div className="container">
               <label htmlFor="firstName" className="label">
                 FIRST NAME
               </label>
               <input
+                placeholder=" "
                 id="firstName"
                 name="firstName"
                 type="text"
                 className="input"
+                required
               />
             </div>
             <div className="container">
@@ -48,6 +54,7 @@ function App() {
                 LAST NAME
               </label>
               <input
+                placeholder=" "
                 id="lastName"
                 name="lastName"
                 type="text"
@@ -58,39 +65,70 @@ function App() {
               <label htmlFor="email" className="label">
                 EMAIL
               </label>
-              <input id="email" name="email" type="email" className="input" />
+              <input
+                placeholder=" "
+                id="email"
+                name="email"
+                type="email"
+                required
+                className="peer input"
+              />
+              <p className="invisible peer-invalid:visible peer-placeholder-shown:peer-invalid:invisible text-red-600 absolute bottom-1 text-xs">
+                * Input a valid email format
+              </p>
             </div>
             <div className="container">
               <label htmlFor="phone" className="label">
                 PHONE NUMBER
               </label>
-              <input id="phone" name="phone" type="tel" className="input" />
+              <input
+                placeholder=" "
+                id="phone"
+                name="phone"
+                type="tel"
+                className="input"
+              />
             </div>
             <div className="container">
               <label htmlFor="password1" className="label">
                 PASSWORD
               </label>
               <input
+                placeholder=" "
+                required
+                minLength={8}
+                maxLength={16}
                 id="password1"
                 name="password1"
                 type="password"
-                className="input"
+                className="input peer"
               />
+              <p className="invisible peer-invalid:visible peer-placeholder-shown:peer-invalid:invisible text-red-600 absolute bottom-1 sm:-bottom-3 text-xs">
+                * Password must be at least 8 characters long
+              </p>
             </div>
             <div className="container">
               <label htmlFor="password2" className="label">
                 CONFIRM PASSWORD
               </label>
               <input
+                placeholder=" "
+                required
+                minLength={8}
+                maxLength={16}
                 id="password2"
                 name="password2"
                 type="password"
-                className="input"
+                className="input peer"
               />
+              <p className="invisible peer-invalid:visible peer-placeholder-shown:peer-invalid:invisible text-red-600 absolute bottom-1 sm:-bottom-3 text-xs">
+                * Password must be at least 8 characters long
+              </p>
             </div>
           </fieldset>
           <button
             type="submit"
+            // onClick={handleSubmit}
             className="block px-12 py-3 sm:ml-12 m-8 bg-green-600 hover:bg-green-500 text-white rounded-lg shadow-md"
           >
             Create Account

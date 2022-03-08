@@ -9,7 +9,9 @@
 
 @layer components {
   .input {
-    @apply shadow-sm border-slate-200 rounded border-2 mb-6 h-8 focus:shadow-lg;
+    @apply shadow-sm rounded border mb-6 h-8 px-2 focus:shadow-lg focus:outline-none 
+     focus:border-sky-600 invalid:border-red-600 valid:border-green-600 placeholder-shown:invalid:border-slate-200 placeholder-shown:focus:border-sky-600
+      placeholder-shown:valid:border-slate-200;
   }
 
   .label {
@@ -17,6 +19,6 @@
   }
 
   .container {
-    @apply flex flex-col;
+    @apply flex flex-col relative;
   }
 }
