@@ -2,7 +2,7 @@
   "name": "odin-sign-up-form",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myusername.github.io/my-app",
+  "homepage": "https://bossolin.github.io/odin-sign-up-form",
   "dependencies": {
     "@tailwindcss/forms": "^0.5.0",
     "@testing-library/jest-dom": "^5.16.2",
